@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AuthRequest {
 
-    @NotBlank(message = "O nome não pode estar em branco.")
-    private String name;
+    @NotBlank(message = "O username não pode estar em branco.")
+    private String username;
     @NotBlank(message = "A senha não pode estar em branco.")
     private String password;
 }

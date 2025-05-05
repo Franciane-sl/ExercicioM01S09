@@ -1,6 +1,5 @@
 package br.com.futuroDev.APISustentavel.Configuration;
 
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -32,7 +31,7 @@ public class JwtUtil {
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
-                .signWith(SECRET_KAY, SignatureAlgorithm.ES256)
+                .signWith(SECRET_KAY, SignatureAlgorithm.HS256)
                 .compact();
     }
 
